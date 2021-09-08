@@ -16,4 +16,4 @@ spec:
       - containerPort: 80
     env:
       - name: SQL_PASS
-        value: $sqlpassword
+        value: $(sqlpassword)
