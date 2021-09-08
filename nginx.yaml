@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: akvapp
+  labels:
+    name: akvapp
+spec:
+  containers:
+  - name: akvapp
+    image: nginx
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
+    env:
+      - name: SQL_PASS
+        value: $sqlpassword
